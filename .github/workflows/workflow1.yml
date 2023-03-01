@@ -1,4 +1,4 @@
-name: Exercise 1
+name: Lint, Test & Build
 on: push
 jobs:
   lint:
@@ -30,7 +30,7 @@ jobs:
         run: npm ci
       - name: Run tests
         run: |
-          npm test
+          npm run test
           echo "Testing ..."
   deploy:
     needs: test
